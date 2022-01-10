@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard</title>
+    <style>
+        #sizecenter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            background-color: peachpuff;
+            color: rebeccapurple;
+            padding: 20px;
+        }
+        .content{
+        }
+        .board{
+            background-color: silver;
+            min-height: auto;
+            min-width: 100px;
+        }
+        .row{
+            background-color: blueviolet;
+            min-height: none;
+            min-width: 100px;
+            display: flex;
+        }
+        .colum1{
+            background-color: peachpuff;
+            height: 50px;
+            width: 50px;
+        }
+        .colum2{
+            background-color: rebeccapurple;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id = "sizecenter">
+        <h1 style="background-color: {{ color1 }}; color: {{ color2 }} ">***Checkerboard***</h1>
+    </div>
+    <div class="content" id = "sizecenter">
+        <div class="board">
+            {% for i in range(0,numj)%}
+                <div class="row">
+                    {% for j in range(0,numi)%}
+                        <div class="colum1" style="background-color: {{ color1 }};"></div>
+                        <div class="colum2" style="background-color: {{ color2 }};"></div>
+                    {% endfor%}
+                </div>
+                <div class="row">
+                    {% for j in range(0,numi)%}
+                        <div class="colum2" style="background-color: {{ color2 }};"></div>
+                        <div class="colum1" style="background-color: {{ color1 }};"></div>
+                    {% endfor%}
+                </div>
+            {% endfor%}
+        </div>
+    </div>
+</body>
+</html>

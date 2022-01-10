@@ -1,0 +1,31 @@
+email regex: 
+r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$'
+
+social regex: 	
+r'^\d{3}-\d{2}-\d{4}$'
+
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color:red">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+Flash messages in one or more place on a page
+
+{% with errors = get_flashed_messages(category_filter=["register"]) %}
+        {% if errors %}
+            {% for msg in errors %}
+            <p style="color:red">{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+Assign the flash messages to that block of jinja like this:
+
+flash("Password is required","register")
+
+
+
+(^|\s)(00[1-9]|0[1-9]0|0[1-9][1-9]|[1-6]\d{2}|7[0-6]\d|77[0-2])(-?|[\. ])([1-9]0|0[1-9]|[1-9][1-9])\3(\d{3}[1-9]|[1-9]\d{3}|\d[1-9]\d{2}|\d{2}[1-9]\d)($|\s|[;:,!\.\?])

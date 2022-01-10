@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome {{ session["first_name"] }}</h1>
+    {% for r in recepie %}
+        <h2>{{r.name}}</h2>
+        <p>Under 30 min  {{r.time}}</p>
+        <p>Instruction {{r.instructions}}</p>
+        <p>Description :{{ r.description}} </p>
+        <p> Date Made   {{ r.date}}</p>
+    {% endfor %}
+</body>
+</html>

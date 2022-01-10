@@ -1,0 +1,66 @@
+INSERT INTO dojos ( id, name, created_at, updated_at)
+VALUE (3, "Naruto", NOW(), NOW());
+INSERT INTO dojos ( id, name, created_at, updated_at)
+VALUE (3, "Onepiece", NOW(), NOW());
+INSERT INTO dojos ( id, name, created_at, updated_at)
+VALUE (3, "DBS", NOW(), NOW());
+
+DELETE FROM dojos
+WHERE id = 3;
+DELETE FROM dojos
+WHERE id = 2;
+DELETE FROM dojos
+WHERE id = 1;
+
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUE (4, "Myhero", NOW(), NOW());
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUE ( 5, "Deathnote", NOW(), NOW());
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUE (6, "BROLLY", NOW(), NOW());
+INSERT INTO dojos (id, name, created_at, updated_at)
+VALUE (1, "BOLLY", NOW(), NOW());
+DELETE FROM dojos
+WHERE id = 1;
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUE ("Izuku", " Midoriya", 15, NOW(), NOW(), 4);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUE ("Katsuki", " Bakugo", 16, NOW(), NOW(), 4);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUE ("Shoto", " Todoroki", 16, NOW(), NOW(), 4);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUE ("Misa", " Amane", 16, NOW(), NOW(), 5);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUE ("light", " Yagami", 16, NOW(), NOW(), 5);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUE ("Teru", " Mikami", 16, NOW(), NOW(), 5);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUE ("Sayein", " brolly", 17, NOW(), NOW(), 6);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUE ("Sayein", " goku", 13, NOW(), NOW(), 6);
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUE ("Sayein", " vegeta", 10, NOW(), NOW(), 6);
+
+DELETE FROM ninjas
+WHERE id = 1;
+DELETE FROM ninjas
+WHERE id = 2;
+DELETE FROM ninjas
+WHERE id = 3;
+DELETE FROM ninjas
+WHERE id = 4;
+DELETE FROM ninjas
+WHERE id = 5;
+DELETE FROM ninjas
+WHERE id = 9;
+DELETE FROM ninjas
+WHERE id = 10;
+DELETE FROM ninjas
+WHERE id = 11;
+
+
+
+SELECT*FROM ninjas;
